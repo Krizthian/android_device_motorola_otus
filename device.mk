@@ -128,8 +128,11 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     libOmxEvrcEnc \
     libOmxQcelp13Enc \
+<<<<<<< HEAD
     libOmxVdec \
     libOmxVdecHevc \
+=======
+>>>>>>> db581fd... otus: use prebuilt libOmxVdec.so
     libOmxVenc \
     libstagefrighthw \
     qcmediaplayer
