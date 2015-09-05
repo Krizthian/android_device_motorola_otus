@@ -1,4 +1,4 @@
-$(call inherit-product, device/motorola/otus/full_otus.mk)
+$(call inherit-product, device/motorola/otus/full_condor.mk)
 
 # Inherit some common Tesla stuff.
 $(call inherit-product, vendor/tesla/config/common_full_phone.mk)
