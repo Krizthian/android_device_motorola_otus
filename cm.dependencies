@@ -8,8 +8,13 @@
     "target_path": "hardware/qcom/fm"
   },
   {
+<<<<<<< HEAD
     "repository": "sultanqasim/android_device_motorola_otus",
     "target_path": "kernel/motorola/msm8610",
     "remote": "github"
+=======
+    "repository": "android_kernel_motorola_otus",
+    "target_path": "kernel/motorola/msm8610"
+>>>>>>> b26b84b... Fix cm.dependencies
   }
 ]
