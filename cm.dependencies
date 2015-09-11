@@ -8,8 +8,13 @@
     "target_path": "hardware/qcom/fm"
   },
   {
+<<<<<<< HEAD
     "repository": "sultanqasim/android_kernel_motorola_otus",
     "target_path": "kernel/motorola/msm8610",
     "remote": "github"
+=======
+    "repository": "android_kernel_motorola_otus",
+    "target_path": "kernel/motorola/otus"
+>>>>>>> ef9b9a9... Avoid kernel path conflict with condor
   }
 ]
