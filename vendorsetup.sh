@@ -1,1 +1,1 @@
-add_lunch_combo tesla_otus-userdebug
+add_lunch_combo xpe_otus-userdebug
