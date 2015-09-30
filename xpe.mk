@@ -1,4 +1,4 @@
-$(call inherit-product, device/motorola/falcon/full_otus.mk)
+$(call inherit-product, device/motorola/otus/full_otus.mk)
 
 # Inherit some common stuff.
 $(call inherit-product, vendor/XPe/config/common_full_phone.mk)
