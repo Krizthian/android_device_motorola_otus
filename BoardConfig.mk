@@ -114,8 +114,13 @@ BOARD_USES_QC_TIME_SERVICES := true
 TARGET_QCOM_MEDIA_VARIANT := caf
 TARGET_RIL_VARIANT := caf
 
+<<<<<<< HEAD
 # Motorola
 TARGET_USES_MOTOROLA_LOG := true
+=======
+# Encryption
+TARGET_HW_DISK_ENCRYPTION := true
+>>>>>>> c4bd667... otus: Provide global moto symbols via libmoto
 
 # Hardware tunables framework
 BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw/
