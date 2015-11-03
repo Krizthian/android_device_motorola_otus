@@ -135,7 +135,11 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     libOmxEvrcEnc \
     libOmxQcelp13Enc \
+<<<<<<< HEAD
     libOmxVdecHevc \
+=======
+    libOmxVdec \
+>>>>>>> b4ae38a... Revert "otus: use prebuilt libOmxVdec.so"
     libOmxVenc \
     libOmxVidcCommon \
     libqcmediaplayer \
