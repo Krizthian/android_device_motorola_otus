@@ -170,20 +170,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     gps.msm8610
 
-<<<<<<< HEAD
-=======
-# Stlport
-PRODUCT_PACKAGES += \
-    libstlport
-
-# CRDA
-PRODUCT_PACKAGES += \
-    crda \
-    linville.key.pub.pem \
-    regdbdump \
-    regulatory.bin
-
->>>>>>> 5562754... otus: build libstlport
 # Misc
 PRODUCT_PACKAGES += \
     curl \
