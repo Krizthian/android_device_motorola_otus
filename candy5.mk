@@ -1,7 +1,7 @@
 # Inherit device configuration
 $(call inherit-product, device/motorola/otus/full_otus.mk)
 
-# Inherit some common CM stuff.
+# Inherit some common Candy5 stuff.
 $(call inherit-product, vendor/candy5/config/common_full_phone.mk)
 
 # Boot animation
