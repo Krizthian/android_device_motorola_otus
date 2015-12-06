@@ -108,7 +108,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml
 
-<<<<<<< HEAD
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8610 \
@@ -200,10 +199,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240
-=======
-DEVICE_PACKAGE_OVERLAYS := \
-    $(LOCAL_PATH)/overlay
->>>>>>> a219bbe... otus: add back device specific overlays
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.mdpcomp.enable=true
