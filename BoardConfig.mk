@@ -18,7 +18,6 @@
 
 LOCAL_PATH := device/motorola/otus
 
-<<<<<<< HEAD
 BOARD_VENDOR := motorola-qcom
 
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
@@ -122,12 +121,10 @@ BLUETOOTH_HCI_USE_MCT := true
 
 # Build
 TARGET_SYSTEMIMAGE_USE_SQUISHER := true
-=======
-TARGET_KERNEL_SOURCE := kernel/motorola/otus
-TARGET_KERNEL_CONFIG := cm_otus_defconfig
->>>>>>> 895caf0... otus: Commonize
 
 # Storage & partiiton
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 10485760
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 10485760
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1895825408
@@ -136,11 +133,42 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
 
+# Vold
+BOARD_VOLD_DISC_HAS_MULTIPLE_MAJORS := true
+BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
+BOARD_VOLD_MAX_PARTITIONS := 40
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
+
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := xt1505,xt1506,otus_umts,otus_umtsds,otus,otus_ds
 
 # Init
+TARGET_INIT_VENDOR_LIB := libinit_msm
 TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/init_otus.cpp
+TARGET_UNIFIED_DEVICE := true
+
+# Recovery
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/ramdisk/fstab.qcom
+BOARD_HAS_NO_SELECT_BUTTON := true
+HAVE_SELINUX := true
+
+# SELinux
+include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
     device/motorola/otus/sepolicy
+
+MALLOC_IMPL := dlmalloc
+
+# Enable dex-preoptimization to speed up first boot sequence
+ifeq ($(HOST_OS),linux)
+  ifeq ($(call match-word-in-list,$(TARGET_BUILD_VARIANT),user),true)
+    ifeq ($(WITH_DEXPREOPT),)
+      WITH_DEXPREOPT := true
+      WITH_DEXPREOPT_BOOT_IMG_ONLY := false
+    endif
+  endif
+endif
+
+# Include an expanded selection of fonts
+EXTENDED_FONT_FOOTPRINT := true
